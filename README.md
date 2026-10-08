@@ -301,6 +301,7 @@ xychart-beta
     y-axis "Time (seconds)" 0 --> 750
     bar [721.508167, 634.089440, 102.444853, 0.017623]
 
+``````
 ## Conclusion
 
 This experiment demonstrates how the same 4000 × 4000 matrix multiplication workload behaves under sequential CPU execution, OpenMP shared-memory parallelism, MPI distributed-memory execution, and CUDA GPU execution. The measured results show that OpenMP provides a modest improvement over the sequential baseline, while MPI achieves a substantially lower execution time through distributed computation across multiple processes.

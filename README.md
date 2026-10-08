@@ -294,7 +294,18 @@ $$
 ### Performance Comparison
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'background':'#ffffff','primaryColor':'#808080','primaryBorderColor':'#606060','primaryTextColor':'#111827','lineColor':'#6b7280','textColor':'#111827','fontFamily':'Arial'}}}%%
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "background": "#111827",
+    "primaryColor": "#808080",
+    "primaryBorderColor": "#A0A0A0",
+    "primaryTextColor": "#FFFFFF",
+    "lineColor": "#9CA3AF",
+    "textColor": "#FFFFFF",
+    "fontFamily": "Arial"
+  }
+}}%%
 xychart-beta
     title "Measured Execution Time"
     x-axis [Sequential, OpenMP, MPI, CUDA]

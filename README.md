@@ -291,23 +291,6 @@ $$
 | MPI | **102.444853 s** | **7.04×** | Strongest verified improvement |
 | CUDA | **0.017623 s** total | **Not validated** | Lowest recorded raw time; output requires verification |
 
-```mermaid
-%%{init: {'theme':'base','themeVariables':{'background':'#ffffff','primaryColor':'#808080','primaryBorderColor':'#606060','primaryTextColor':'#111827','lineColor':'#6b7280','textColor':'#111827','fontFamily':'Arial'}}}%%
-xychart-beta
-    title "Measured Execution Time"
-    x-axis [Sequential, OpenMP, MPI, CUDA]
-    y-axis "Time (seconds)" 0 --> 750
-    bar [721.508167, 634.089440, 102.444853, 0.017623]
-```
-
-The measured results show a substantial reduction in execution time with MPI compared with the sequential and OpenMP implementations. CUDA records the lowest raw execution time, but its recorded output was not verified successfully; therefore, the CUDA timing is not treated as a validated acceleration result.
-
-## Author
-
-**Rakshita L Kademani**
-
-PGC Experiment 1 — Parallel Matrix Multiplication
-
 ## Conclusion
 
 This experiment demonstrates how the same 4000 × 4000 matrix multiplication workload behaves under sequential CPU execution, OpenMP shared-memory parallelism, MPI distributed-memory execution, and CUDA GPU execution. The measured results show that OpenMP provides a modest improvement over the sequential baseline, while MPI achieves a substantially lower execution time through distributed computation across multiple processes.
@@ -315,6 +298,11 @@ This experiment demonstrates how the same 4000 × 4000 matrix multiplication wor
 The CUDA implementation records the lowest execution time in the measured runs. However, the recorded CUDA output did not produce the expected verification value, so its timing should be treated as an observed measurement rather than a validated performance result. Overall, the experiment highlights the performance trade-offs between shared-memory, distributed-memory, and GPU-based parallel computing while maintaining the same computational problem across all implementations.
 
 ---
+## Author
+
+**Rakshita L Kademani**
+
+PGC Experiment 1 — Parallel Matrix Multiplication
 
 <p align="center">
   <strong>PGC Experiment 1</strong><br>

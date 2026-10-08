@@ -291,6 +291,16 @@ $$
 | MPI | **102.444853 s** | **7.04×** | Strongest verified improvement |
 | CUDA | **0.017623 s** total | **Not validated** | Lowest recorded raw time; output requires verification |
 
+### Performance Comparison
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#ffffff','primaryColor':'#808080','primaryBorderColor':'#606060','primaryTextColor':'#111827','lineColor':'#6b7280','textColor':'#111827','fontFamily':'Arial'}}}%%
+xychart-beta
+    title "Measured Execution Time"
+    x-axis [Sequential, OpenMP, MPI, CUDA]
+    y-axis "Time (seconds)" 0 --> 750
+    bar [721.508167, 634.089440, 102.444853, 0.017623]
+
 ## Conclusion
 
 This experiment demonstrates how the same 4000 × 4000 matrix multiplication workload behaves under sequential CPU execution, OpenMP shared-memory parallelism, MPI distributed-memory execution, and CUDA GPU execution. The measured results show that OpenMP provides a modest improvement over the sequential baseline, while MPI achieves a substantially lower execution time through distributed computation across multiple processes.
